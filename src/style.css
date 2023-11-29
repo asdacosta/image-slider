@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 1.2px;
+  /* border: 2px solid tomato; */
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+video#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
