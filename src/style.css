@@ -24,7 +24,7 @@ body > section {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px 1px #3d3d3d;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
 }
 
 .slides {
@@ -44,6 +44,7 @@ video#bg-video {
 
 .slides > div {
   position: relative;
+  /* transition: width 3s ease-in-out; */
 }
 
 .slides img {
