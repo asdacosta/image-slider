@@ -318,3 +318,13 @@ const colorSelectedCircle = function () {
     });
   });
 };
+
+const transitionHeaderColor = (function () {
+  const colors = ['rgb(82, 151, 255)', 'rgb(56, 211, 250)', 'rgb(230, 180, 116)'];
+
+  function changeColor() {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    getContainers.header.style.color = randomColor;
+  }
+  setInterval(changeColor, 2000);
+})();
