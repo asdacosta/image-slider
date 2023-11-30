@@ -144,3 +144,19 @@ const prevSwitches = (function () {
     changeThirdDivToPrevClass,
   };
 })();
+
+const prev = (function () {
+  const moveToPrev = (function () {
+    const prevIcon = document.querySelector('.left');
+
+    prevIcon.addEventListener('click', () => {
+      const firstImgDivClass = selectElements.firstImgAtLoadContainer.className;
+      const secondImgDivClass = selectElements.secondImgAtLoadContainer.className;
+      const thirdImgDivClass = selectElements.thirdImgAtLoadContainer.className;
+
+      prevSwitches.changeFirstDivToPrevClass(firstImgDivClass);
+      prevSwitches.changeSecondDivToPrevClass(secondImgDivClass);
+      prevSwitches.changeThirdDivToPrevClass(thirdImgDivClass);
+    });
+  })();
+})();
