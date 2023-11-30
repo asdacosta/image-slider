@@ -127,6 +127,6 @@ span {
 h1 {
   position: absolute;
   color: white;
-  font-weight: 800;
   top: 8rem;
+  transition: color 5s ease;
 }
