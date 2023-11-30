@@ -17,53 +17,61 @@ const selectElements = (function () {
   return { firstImgAtLoadContainer, secondImgAtLoadContainer, thirdImgAtLoadContainer };
 })();
 
-function changeFirstDivToNextClass(imgDivClass) {
-  switch (imgDivClass) {
-    case 'slide1':
-      selectElements.firstImgAtLoadContainer.classList.replace('slide1', 'slide3');
-      break;
-    case 'slide2':
-      selectElements.firstImgAtLoadContainer.classList.replace('slide2', 'slide1');
-      break;
-    case 'slide3':
-      selectElements.firstImgAtLoadContainer.classList.replace('slide3', 'slide2');
-      break;
-    default:
-      console.log("Can't find class :/");
+const switchAllCases = (function () {
+  function changeFirstDivToNextClass(imgDivClass) {
+    switch (imgDivClass) {
+      case 'slide1':
+        selectElements.firstImgAtLoadContainer.classList.replace('slide1', 'slide3');
+        break;
+      case 'slide2':
+        selectElements.firstImgAtLoadContainer.classList.replace('slide2', 'slide1');
+        break;
+      case 'slide3':
+        selectElements.firstImgAtLoadContainer.classList.replace('slide3', 'slide2');
+        break;
+      default:
+        console.log("Can't find class :/");
+    }
   }
-}
 
-function changeSecondDivToNextClass(imgDivClass) {
-  switch (imgDivClass) {
-    case 'slide1':
-      selectElements.secondImgAtLoadContainer.classList.replace('slide1', 'slide3');
-      break;
-    case 'slide2':
-      selectElements.secondImgAtLoadContainer.classList.replace('slide2', 'slide1');
-      break;
-    case 'slide3':
-      selectElements.secondImgAtLoadContainer.classList.replace('slide3', 'slide2');
-      break;
-    default:
-      console.log("Can't find class :/");
+  function changeSecondDivToNextClass(imgDivClass) {
+    switch (imgDivClass) {
+      case 'slide1':
+        selectElements.secondImgAtLoadContainer.classList.replace('slide1', 'slide3');
+        break;
+      case 'slide2':
+        selectElements.secondImgAtLoadContainer.classList.replace('slide2', 'slide1');
+        break;
+      case 'slide3':
+        selectElements.secondImgAtLoadContainer.classList.replace('slide3', 'slide2');
+        break;
+      default:
+        console.log("Can't find class :/");
+    }
   }
-}
 
-function changeThirdDivToNextClass(imgDivClass) {
-  switch (imgDivClass) {
-    case 'slide1':
-      selectElements.thirdImgAtLoadContainer.classList.replace('slide1', 'slide3');
-      break;
-    case 'slide2':
-      selectElements.thirdImgAtLoadContainer.classList.replace('slide2', 'slide1');
-      break;
-    case 'slide3':
-      selectElements.thirdImgAtLoadContainer.classList.replace('slide3', 'slide2');
-      break;
-    default:
-      console.log("Can't find class :/");
+  function changeThirdDivToNextClass(imgDivClass) {
+    switch (imgDivClass) {
+      case 'slide1':
+        selectElements.thirdImgAtLoadContainer.classList.replace('slide1', 'slide3');
+        break;
+      case 'slide2':
+        selectElements.thirdImgAtLoadContainer.classList.replace('slide2', 'slide1');
+        break;
+      case 'slide3':
+        selectElements.thirdImgAtLoadContainer.classList.replace('slide3', 'slide2');
+        break;
+      default:
+        console.log("Can't find class :/");
+    }
   }
-}
+
+  return {
+    changeFirstDivToNextClass,
+    changeSecondDivToNextClass,
+    changeThirdDivToNextClass,
+  };
+})();
 
 const next = (function () {
   const moveToNext = (function () {
@@ -74,9 +82,9 @@ const next = (function () {
       const secondImgDivClass = selectElements.secondImgAtLoadContainer.className;
       const thirdImgDivClass = selectElements.thirdImgAtLoadContainer.className;
 
-      changeFirstDivToNextClass(firstImgDivClass);
-      changeSecondDivToNextClass(secondImgDivClass);
-      changeThirdDivToNextClass(thirdImgDivClass);
+      switchAllCases.changeFirstDivToNextClass(firstImgDivClass);
+      switchAllCases.changeSecondDivToNextClass(secondImgDivClass);
+      switchAllCases.changeThirdDivToNextClass(thirdImgDivClass);
     });
   })();
 })();
