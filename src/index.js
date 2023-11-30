@@ -319,6 +319,9 @@ const colorSelectedCircle = function () {
   });
 };
 
+// TODO: Create Left & Right Slideshow
+const slideshow = (function () {})();
+
 const transitionHeaderColor = (function () {
   const colors = ['rgb(82, 151, 255)', 'rgb(56, 211, 250)', 'rgb(230, 180, 116)'];
 
