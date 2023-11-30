@@ -3,17 +3,18 @@ Create an image slideshow and slider.
 
 
 Algorithm
+1. Create SELECTELEMENTS function
+
 Create next function.
-1. Create MOVETONEXT function
-    * Change img div classes to next one.
-        - set class SLIDE1 to SLIDE3, SLIDE2 to SLIDE1 , then SLIDE3 to SLIDE2
+1. Create CHANGETONEXTCLASS function 
+    * Add switch statement for the three different class types to the next
+2. Create MOVETONEXT function
+    * Select NEXT element
+    * Add click event to NEXT
+        - Call MOVETONEXT function
 
 //    * Blur current image and set size to default
 //    * Unblur upcoming image and set size to display
 //    * Make use of ORDER flexbox property to arrange images div in respective positions.
 
     * Make a smooth transition to next image
-2. Create InitiateNextMove function
-    * Select NEXT element
-    * Add click event to NEXT
-        - Call MOVETONEXT function
