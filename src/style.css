@@ -85,6 +85,11 @@ span {
   cursor: pointer;
 }
 
+span:hover {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .circle2 {
   background-color: rgb(56, 211, 250);
 }
@@ -93,6 +98,7 @@ span {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  height: 1.6rem;
   margin-top: 3.5rem;
 }
 
@@ -119,9 +125,14 @@ span {
 
 .change img {
   width: 3rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.change img:hover {
+  width: 3.2rem;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 h1 {
@@ -130,4 +141,5 @@ h1 {
   top: 8rem;
   transition: color 5s ease;
   font-size: 2.5rem;
+  cursor: context-menu;
 }
