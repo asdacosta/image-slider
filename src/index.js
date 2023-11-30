@@ -54,6 +54,7 @@ const changeImgWithBottomCircles = (function () {
         break;
       case 'slide3':
         getContainers.thirdImgAtLoadContainer.classList.replace('slide3', 'slide1');
+        break;
     }
   }
 
@@ -82,6 +83,7 @@ const changeImgWithBottomCircles = (function () {
         break;
       case 'slide1':
         getContainers.thirdImgAtLoadContainer.classList.replace('slide1', 'slide3');
+        break;
     }
   }
 
