@@ -17,7 +17,7 @@ const selectElements = (function () {
   return { firstImgAtLoadContainer, secondImgAtLoadContainer, thirdImgAtLoadContainer };
 })();
 
-const switchAllCases = (function () {
+const nextSwitches = (function () {
   function changeFirstDivToNextClass(imgDivClass) {
     switch (imgDivClass) {
       case 'slide1':
@@ -82,9 +82,65 @@ const next = (function () {
       const secondImgDivClass = selectElements.secondImgAtLoadContainer.className;
       const thirdImgDivClass = selectElements.thirdImgAtLoadContainer.className;
 
-      switchAllCases.changeFirstDivToNextClass(firstImgDivClass);
-      switchAllCases.changeSecondDivToNextClass(secondImgDivClass);
-      switchAllCases.changeThirdDivToNextClass(thirdImgDivClass);
+      nextSwitches.changeFirstDivToNextClass(firstImgDivClass);
+      nextSwitches.changeSecondDivToNextClass(secondImgDivClass);
+      nextSwitches.changeThirdDivToNextClass(thirdImgDivClass);
     });
   })();
+})();
+
+const prevSwitches = (function () {
+  function changeFirstDivToPrevClass(imgDivClass) {
+    switch (imgDivClass) {
+      case 'slide1':
+        selectElements.firstImgAtLoadContainer.classList.replace('slide1', 'slide2');
+        break;
+      case 'slide2':
+        selectElements.firstImgAtLoadContainer.classList.replace('slide2', 'slide3');
+        break;
+      case 'slide3':
+        selectElements.firstImgAtLoadContainer.classList.replace('slide3', 'slide1');
+        break;
+      default:
+        console.log("Can't find class :/");
+    }
+  }
+
+  function changeSecondDivToPrevClass(imgDivClass) {
+    switch (imgDivClass) {
+      case 'slide1':
+        selectElements.secondImgAtLoadContainer.classList.replace('slide1', 'slide2');
+        break;
+      case 'slide2':
+        selectElements.secondImgAtLoadContainer.classList.replace('slide2', 'slide3');
+        break;
+      case 'slide3':
+        selectElements.secondImgAtLoadContainer.classList.replace('slide3', 'slide1');
+        break;
+      default:
+        console.log("Can't find class :/");
+    }
+  }
+
+  function changeThirdDivToPrevClass(imgDivClass) {
+    switch (imgDivClass) {
+      case 'slide1':
+        selectElements.thirdImgAtLoadContainer.classList.replace('slide1', 'slide2');
+        break;
+      case 'slide2':
+        selectElements.thirdImgAtLoadContainer.classList.replace('slide2', 'slide3');
+        break;
+      case 'slide3':
+        selectElements.thirdImgAtLoadContainer.classList.replace('slide3', 'slide1');
+        break;
+      default:
+        console.log("Can't find class :/");
+    }
+  }
+
+  return {
+    changeFirstDivToPrevClass,
+    changeSecondDivToPrevClass,
+    changeThirdDivToPrevClass,
+  };
 })();
