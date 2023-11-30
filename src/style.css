@@ -73,7 +73,7 @@ video#bg-video {
 
 .slide1 img,
 .slide3 img {
-  filter: blur(2px);
+  filter: blur(3px);
 }
 
 span {
