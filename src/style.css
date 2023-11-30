@@ -59,6 +59,18 @@ video#bg-video {
   z-index: 1;
 }
 
+.slide1 {
+  order: 1;
+}
+
+.slide2 {
+  order: 2;
+}
+
+.slide3 {
+  order: 3;
+}
+
 .slide1 img,
 .slide3 img {
   filter: blur(2px);
