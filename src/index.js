@@ -84,6 +84,8 @@ const nextImgLogic = (function () {
       nextSwitches.changeFirstDivToNextClass(firstImgDivClass);
       nextSwitches.changeSecondDivToNextClass(secondImgDivClass);
       nextSwitches.changeThirdDivToNextClass(thirdImgDivClass);
+
+      changeHeader();
     });
   })();
 })();
@@ -155,6 +157,27 @@ const prevImgLogic = (function () {
       prevSwitches.changeFirstDivToPrevClass(firstImgDivClass);
       prevSwitches.changeSecondDivToPrevClass(secondImgDivClass);
       prevSwitches.changeThirdDivToPrevClass(thirdImgDivClass);
+
+      changeHeader();
     });
   })();
 })();
+
+const changeHeader = function () {
+  const header = document.querySelector('h1');
+  const currentImgClass = document.querySelector('.slide2 img').className;
+
+  switch (currentImgClass) {
+    case 'Ever':
+      header.textContent = 'Chef Ever';
+      break;
+    case 'Costa':
+      header.textContent = 'Chef Costa';
+      break;
+    case 'Silvanus':
+      header.textContent = 'Chef Silvanus';
+      break;
+    default:
+      console.log('Ever Costa Silvanus not found');
+  }
+};
