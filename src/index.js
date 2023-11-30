@@ -38,11 +38,11 @@ const changeHeader = function () {
     case 'Costa':
       getContainers.header.textContent = 'Chef Costa';
       break;
-    case 'Silvanus':
-      getContainers.header.textContent = 'Chef Silvanus';
+    case 'Winston':
+      getContainers.header.textContent = 'Chef Winston';
       break;
     default:
-      console.log('Ever Costa Silvanus not found');
+      console.log('Ever Costa Winston not found');
   }
 };
 
@@ -311,7 +311,7 @@ const colorSelectedCircle = function () {
           circle.style.backgroundColor = 'rgb(82, 151, 255)';
         } else if (img.className === 'Costa' && index === 1) {
           circle.style.backgroundColor = 'rgb(56, 211, 250)';
-        } else if (img.className === 'Silvanus' && index === 2) {
+        } else if (img.className === 'Winston' && index === 2) {
           circle.style.backgroundColor = 'rgb(230, 180, 116)';
         }
       }
