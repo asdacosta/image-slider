@@ -300,7 +300,7 @@ const changeImgWithBottomCircles = (function () {
 
 const colorSelectedCircle = function () {
   getContainers.circles.forEach((circle, index) => {
-    circle.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
+    circle.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
 
     const slidesImgs = document.querySelectorAll('.slides img');
     slidesImgs.forEach((img) => {
@@ -308,11 +308,11 @@ const colorSelectedCircle = function () {
 
       if (imgContainer.className === 'slide2') {
         if (img.className === 'Ever' && index === 0) {
-          circle.style.backgroundColor = 'white';
+          circle.style.backgroundColor = 'rgb(82, 151, 255)';
         } else if (img.className === 'Costa' && index === 1) {
-          circle.style.backgroundColor = 'white';
+          circle.style.backgroundColor = 'rgb(56, 211, 250)';
         } else if (img.className === 'Silvanus' && index === 2) {
-          circle.style.backgroundColor = 'white';
+          circle.style.backgroundColor = 'rgb(230, 180, 116)';
         }
       }
     });
