@@ -10,12 +10,127 @@ const importAllImages = (function () {
 })();
 
 const getContainers = (function () {
+  // For prevImgLogic & nextImgLogic
   const firstImgAtLoadContainer = document.querySelector('.slide1');
   const secondImgAtLoadContainer = document.querySelector('.slide2');
   const thirdImgAtLoadContainer = document.querySelector('.slide3');
+  // For changeHeader
+  const header = document.querySelector('h1');
+  // For changeImgWithBottomCircles
+  const circles = document.querySelectorAll('.circles > span');
 
-  return { firstImgAtLoadContainer, secondImgAtLoadContainer, thirdImgAtLoadContainer };
+  return {
+    firstImgAtLoadContainer,
+    secondImgAtLoadContainer,
+    thirdImgAtLoadContainer,
+    header,
+    circles,
+  };
 })();
+
+const changeImgWithBottomCircles = (function () {
+  getContainers.circles.forEach((circle) => {
+    circle.addEventListener('click', () => {
+      if (circle.className === 'circle1') {
+        switch (getContainers.firstImgAtLoadContainer.className) {
+          case 'slide1':
+            getContainers.firstImgAtLoadContainer.classList.replace('slide1', 'slide2');
+            break;
+          case 'slide3':
+            getContainers.firstImgAtLoadContainer.classList.replace('slide3', 'slide2');
+            break;
+          default:
+            console.log('Already there!');
+        }
+        switch (getContainers.secondImgAtLoadContainer.className) {
+          case 'slide2':
+            getContainers.secondImgAtLoadContainer.classList.replace('slide2', 'slide3');
+            break;
+          case 'slide1':
+            getContainers.secondImgAtLoadContainer.classList.replace('slide1', 'slide3');
+            break;
+        }
+        switch (getContainers.thirdImgAtLoadContainer.className) {
+          case 'slide2':
+            getContainers.thirdImgAtLoadContainer.classList.replace('slide2', 'slide1');
+            break;
+          case 'slide3':
+            getContainers.thirdImgAtLoadContainer.classList.replace('slide3', 'slide1');
+        }
+      } else if (circle.className === 'circle2') {
+        switch (getContainers.firstImgAtLoadContainer.className) {
+          case 'slide2':
+            getContainers.firstImgAtLoadContainer.classList.replace('slide2', 'slide1');
+            break;
+          case 'slide3':
+            getContainers.firstImgAtLoadContainer.classList.replace('slide3', 'slide1');
+            break;
+        }
+        switch (getContainers.secondImgAtLoadContainer.className) {
+          case 'slide1':
+            getContainers.secondImgAtLoadContainer.classList.replace('slide1', 'slide2');
+            break;
+          case 'slide3':
+            getContainers.secondImgAtLoadContainer.classList.replace('slide3', 'slide2');
+            break;
+          default:
+            console.log('Already there!');
+        }
+        switch (getContainers.thirdImgAtLoadContainer.className) {
+          case 'slide2':
+            getContainers.thirdImgAtLoadContainer.classList.replace('slide2', 'slide3');
+            break;
+          case 'slide1':
+            getContainers.thirdImgAtLoadContainer.classList.replace('slide1', 'slide3');
+        }
+      } else if (circle.className === 'circle3') {
+        switch (getContainers.firstImgAtLoadContainer.className) {
+          case 'slide1':
+            getContainers.firstImgAtLoadContainer.classList.replace('slide1', 'slide3');
+            break;
+          case 'slide2':
+            getContainers.firstImgAtLoadContainer.classList.replace('slide2', 'slide3');
+            break;
+        }
+        switch (getContainers.secondImgAtLoadContainer.className) {
+          case 'slide2':
+            getContainers.secondImgAtLoadContainer.classList.replace('slide2', 'slide1');
+            break;
+          case 'slide3':
+            getContainers.secondImgAtLoadContainer.classList.replace('slide3', 'slide1');
+            break;
+        }
+        switch (getContainers.thirdImgAtLoadContainer.className) {
+          case 'slide1':
+            getContainers.thirdImgAtLoadContainer.classList.replace('slide1', 'slide2');
+            break;
+          case 'slide3':
+            getContainers.thirdImgAtLoadContainer.classList.replace('slide3', 'slide2');
+          default:
+            console.log('Already there!');
+        }
+      }
+    });
+  });
+})();
+
+const changeHeader = function () {
+  const currentImgClass = document.querySelector('.slide2 img').className;
+
+  switch (currentImgClass) {
+    case 'Ever':
+      getContainers.header.textContent = 'Chef Ever';
+      break;
+    case 'Costa':
+      getContainers.header.textContent = 'Chef Costa';
+      break;
+    case 'Silvanus':
+      getContainers.header.textContent = 'Chef Silvanus';
+      break;
+    default:
+      console.log('Ever Costa Silvanus not found');
+  }
+};
 
 const nextImgLogic = (function () {
   const nextSwitches = (function () {
@@ -162,22 +277,3 @@ const prevImgLogic = (function () {
     });
   })();
 })();
-
-const changeHeader = function () {
-  const header = document.querySelector('h1');
-  const currentImgClass = document.querySelector('.slide2 img').className;
-
-  switch (currentImgClass) {
-    case 'Ever':
-      header.textContent = 'Chef Ever';
-      break;
-    case 'Costa':
-      header.textContent = 'Chef Costa';
-      break;
-    case 'Silvanus':
-      header.textContent = 'Chef Silvanus';
-      break;
-    default:
-      console.log('Ever Costa Silvanus not found');
-  }
-};
