@@ -13,8 +13,7 @@ Create next function.
     * Add click event to NEXT
         - Call MOVETONEXT function
 
-//    * Blur current image and set size to default
-//    * Unblur upcoming image and set size to display
-//    * Make use of ORDER flexbox property to arrange images div in respective positions.
-
     * Make a smooth transition to next image
+
+Create prev function.
+// Alternate next function Logic
