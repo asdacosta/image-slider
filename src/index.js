@@ -29,86 +29,99 @@ const getContainers = (function () {
 })();
 
 const changeImgWithBottomCircles = (function () {
+  function triggerFirstCircle() {
+    switch (getContainers.firstImgAtLoadContainer.className) {
+      case 'slide1':
+        getContainers.firstImgAtLoadContainer.classList.replace('slide1', 'slide2');
+        break;
+      case 'slide3':
+        getContainers.firstImgAtLoadContainer.classList.replace('slide3', 'slide2');
+        break;
+      default:
+        console.log('Already there!');
+    }
+    switch (getContainers.secondImgAtLoadContainer.className) {
+      case 'slide2':
+        getContainers.secondImgAtLoadContainer.classList.replace('slide2', 'slide3');
+        break;
+      case 'slide1':
+        getContainers.secondImgAtLoadContainer.classList.replace('slide1', 'slide3');
+        break;
+    }
+    switch (getContainers.thirdImgAtLoadContainer.className) {
+      case 'slide2':
+        getContainers.thirdImgAtLoadContainer.classList.replace('slide2', 'slide1');
+        break;
+      case 'slide3':
+        getContainers.thirdImgAtLoadContainer.classList.replace('slide3', 'slide1');
+    }
+  }
+
+  function triggerSecondCircle() {
+    switch (getContainers.firstImgAtLoadContainer.className) {
+      case 'slide2':
+        getContainers.firstImgAtLoadContainer.classList.replace('slide2', 'slide1');
+        break;
+      case 'slide3':
+        getContainers.firstImgAtLoadContainer.classList.replace('slide3', 'slide1');
+        break;
+    }
+    switch (getContainers.secondImgAtLoadContainer.className) {
+      case 'slide1':
+        getContainers.secondImgAtLoadContainer.classList.replace('slide1', 'slide2');
+        break;
+      case 'slide3':
+        getContainers.secondImgAtLoadContainer.classList.replace('slide3', 'slide2');
+        break;
+      default:
+        console.log('Already there!');
+    }
+    switch (getContainers.thirdImgAtLoadContainer.className) {
+      case 'slide2':
+        getContainers.thirdImgAtLoadContainer.classList.replace('slide2', 'slide3');
+        break;
+      case 'slide1':
+        getContainers.thirdImgAtLoadContainer.classList.replace('slide1', 'slide3');
+    }
+  }
+
+  function triggerThirdCircle() {
+    switch (getContainers.firstImgAtLoadContainer.className) {
+      case 'slide1':
+        getContainers.firstImgAtLoadContainer.classList.replace('slide1', 'slide3');
+        break;
+      case 'slide2':
+        getContainers.firstImgAtLoadContainer.classList.replace('slide2', 'slide3');
+        break;
+    }
+    switch (getContainers.secondImgAtLoadContainer.className) {
+      case 'slide2':
+        getContainers.secondImgAtLoadContainer.classList.replace('slide2', 'slide1');
+        break;
+      case 'slide3':
+        getContainers.secondImgAtLoadContainer.classList.replace('slide3', 'slide1');
+        break;
+    }
+    switch (getContainers.thirdImgAtLoadContainer.className) {
+      case 'slide1':
+        getContainers.thirdImgAtLoadContainer.classList.replace('slide1', 'slide2');
+        break;
+      case 'slide3':
+        getContainers.thirdImgAtLoadContainer.classList.replace('slide3', 'slide2');
+        break;
+      default:
+        console.log('Already there!');
+    }
+  }
+
   getContainers.circles.forEach((circle) => {
     circle.addEventListener('click', () => {
       if (circle.className === 'circle1') {
-        switch (getContainers.firstImgAtLoadContainer.className) {
-          case 'slide1':
-            getContainers.firstImgAtLoadContainer.classList.replace('slide1', 'slide2');
-            break;
-          case 'slide3':
-            getContainers.firstImgAtLoadContainer.classList.replace('slide3', 'slide2');
-            break;
-          default:
-            console.log('Already there!');
-        }
-        switch (getContainers.secondImgAtLoadContainer.className) {
-          case 'slide2':
-            getContainers.secondImgAtLoadContainer.classList.replace('slide2', 'slide3');
-            break;
-          case 'slide1':
-            getContainers.secondImgAtLoadContainer.classList.replace('slide1', 'slide3');
-            break;
-        }
-        switch (getContainers.thirdImgAtLoadContainer.className) {
-          case 'slide2':
-            getContainers.thirdImgAtLoadContainer.classList.replace('slide2', 'slide1');
-            break;
-          case 'slide3':
-            getContainers.thirdImgAtLoadContainer.classList.replace('slide3', 'slide1');
-        }
+        triggerFirstCircle();
       } else if (circle.className === 'circle2') {
-        switch (getContainers.firstImgAtLoadContainer.className) {
-          case 'slide2':
-            getContainers.firstImgAtLoadContainer.classList.replace('slide2', 'slide1');
-            break;
-          case 'slide3':
-            getContainers.firstImgAtLoadContainer.classList.replace('slide3', 'slide1');
-            break;
-        }
-        switch (getContainers.secondImgAtLoadContainer.className) {
-          case 'slide1':
-            getContainers.secondImgAtLoadContainer.classList.replace('slide1', 'slide2');
-            break;
-          case 'slide3':
-            getContainers.secondImgAtLoadContainer.classList.replace('slide3', 'slide2');
-            break;
-          default:
-            console.log('Already there!');
-        }
-        switch (getContainers.thirdImgAtLoadContainer.className) {
-          case 'slide2':
-            getContainers.thirdImgAtLoadContainer.classList.replace('slide2', 'slide3');
-            break;
-          case 'slide1':
-            getContainers.thirdImgAtLoadContainer.classList.replace('slide1', 'slide3');
-        }
+        triggerSecondCircle();
       } else if (circle.className === 'circle3') {
-        switch (getContainers.firstImgAtLoadContainer.className) {
-          case 'slide1':
-            getContainers.firstImgAtLoadContainer.classList.replace('slide1', 'slide3');
-            break;
-          case 'slide2':
-            getContainers.firstImgAtLoadContainer.classList.replace('slide2', 'slide3');
-            break;
-        }
-        switch (getContainers.secondImgAtLoadContainer.className) {
-          case 'slide2':
-            getContainers.secondImgAtLoadContainer.classList.replace('slide2', 'slide1');
-            break;
-          case 'slide3':
-            getContainers.secondImgAtLoadContainer.classList.replace('slide3', 'slide1');
-            break;
-        }
-        switch (getContainers.thirdImgAtLoadContainer.className) {
-          case 'slide1':
-            getContainers.thirdImgAtLoadContainer.classList.replace('slide1', 'slide2');
-            break;
-          case 'slide3':
-            getContainers.thirdImgAtLoadContainer.classList.replace('slide3', 'slide2');
-          default:
-            console.log('Already there!');
-        }
+        triggerThirdCircle();
       }
     });
   });
