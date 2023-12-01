@@ -89,6 +89,7 @@ Developers, users, recruiters.
 
 - [ ] Create a smooth transition
 - [ ] Create a slideshow with time inteval of 5s
+- [ ] Add local storage for current selected image
 
 </details>
 
