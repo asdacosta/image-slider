@@ -78,6 +78,7 @@ Developers, users, recruiters.
 |`src/imgs/secondary.jpg`| Photo created by Aldi Sigun on [Unsplash](https://unsplash.com/).|
 |`src/imgs/tertiary.jpg`| Photo created by Anshita Nair on [Unsplash](https://unsplash.com/).|
 |`src/imgs/chevron.png`| Icon created by Freepik on [Flaticon](https://www.flaticon.com/free-icons/).|
+|`src/imgs/bg.mp4`| Video from [Videvo](https://www.videvo.net/).|
 
 
 </details>
