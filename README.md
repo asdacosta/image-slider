@@ -21,7 +21,7 @@
 
 **Demo:**
 
-![Live Demo](./view-imgs/)
+![Live Demo](./view-imgs/slider-demo.gif)
 
 <details>
 
@@ -29,7 +29,7 @@
 
 **Desktop View:**
 
-<img src="./view-imgs/" alt="desktop view">
+<img src="./view-imgs/desktop.png" alt="desktop view">
 <br>
 
 **Mobile View:**
