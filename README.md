@@ -68,7 +68,7 @@ Developers, users, recruiters.
 |`.eslintrc.json`| Configuration file for ESLint (JavaScript linting utility).|
 |`package*`| Contains details of project and dependencies versions.|
 |`*ignore`| Contains directories and files a particular Technology should ignore.|
-|`view-imgs`| Contains the live demo and different screen views used in `README.md`.|
+|`view-imgs/*`| Live demo and different screen views used in `README.md`.|
 </details>
 
 ## ©️ Credit
