@@ -50,6 +50,9 @@ To solidify concepts of `Dynamic User Interface Interactions` in JavaScript.
 ## 👥 Intended Audience
 Developers, users, recruiters.
 
+> [!NOTE]
+> Users can install all dependencies via `npm install` using `package.json` file.
+
 ## 📂 Files
 <details>
 <summary>Invert</summary>
@@ -98,7 +101,7 @@ Developers, users, recruiters.
 
 <br>
 
-> [!NOTE]
+> [!IMPORTANT]
 > Seek contributor's consent for any code usage.
 
 **[🞁 Top](#image-slider)**
