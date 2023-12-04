@@ -21,7 +21,7 @@
 
 **Demo:**
 
-![Live Demo](./view-imgs/slider-demo.gif)
+![Live Demo](./readme-assets/slider-demo.gif)
 
 <details>
 
@@ -29,7 +29,7 @@
 
 **Desktop View:**
 
-<img src="./view-imgs/desktop.png" alt="desktop view">
+<img src="./readme-assets/desktop.png" alt="desktop view">
 <br>
 
 **Mobile View:**
@@ -63,12 +63,8 @@ Developers, users, recruiters.
 |`src/index.js`| The main JavaScript entry point that bundling begins.|
 |`dist/*`| Output files from bundling of files in directory `src/`.|
 |`dist/main.js`| Main JavaScript output file that contains the bundled JavaScript code. Code is minified and optimized for deployment (Due to mode set to production in webpack config). |
-|`webpack.config.js`| Configuration file for Webpack (Module bundler). It enables the bundling of different assets.|
-|`.prettierrc`| Configuration file for Prettier (Code formatter).|
-|`.eslintrc.json`| Configuration file for ESLint (JavaScript linting utility).|
 |`package*`| Contains details of project and dependencies versions.|
-|`*ignore`| Contains directories and files a particular Technology should ignore.|
-|`view-imgs/*`| Live demo and different screen views used in `README.md`.|
+|`readme-assets/*`| Live demo and different screen views used in `README.md`.|
 </details>
 
 ## ©️ Credit
